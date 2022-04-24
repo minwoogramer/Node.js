@@ -15,29 +15,13 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">TodoApp</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/write">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">임시</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  
   <h4 class="ml-2 my-3">서버에서 가져온 할일 리스트</h4>
+  <div class="container input-group mb-2">
+    <input class="form-control">
+    <button class="input-group-append btn btn-danger" id="search">검색</button>
+  </div>
+  
   <div class="container">
     <ul class="list-group">
 
@@ -55,6 +39,9 @@
   </div>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
   <script>
+     $('#search').click(function(){
+    window.location.replace('/search?value=이닦기')
+  });
 
     $('.delete').click(function (e) {
       let textNumber = e.target.dataset.id;
