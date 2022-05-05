@@ -246,4 +246,4 @@ app.get('/image/:imageName',function(req,res){
 
 
 // 이미지 하드에저장하기 memoryStorage ->램에다 저장해주세요
-
+//aggrigate 검색조건을 여러개넣어주어 서버에 부담을 줄여준다
